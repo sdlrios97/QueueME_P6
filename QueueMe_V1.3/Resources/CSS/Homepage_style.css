@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.nav-background{
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    background-color: #2b6cd4;
+}
+
+.nav-bar{
+    width: 100%;
+    height: 70px;
+}
+
+.search-bar{
+    position: relative;
+    
+}
+
+.signout-btn{
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    
+}
+
+.noti-btn{
+    position: fixed;
+    right: 225px;
+    top: 10px;
+}
+
+.acc-btn{
+    position: fixed;
+    right: 155px;
+    top: 10px;
+}
+
+.main-box {
+    position: fixed;
+    top: 75px;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.center-box {
+    position: relative;
+    top: 75px;
+    left: 200px;
+    width: 75%;
+    height: 75%;
+    background-color: #2b6cd4;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.center-img{
+    position: absolute;
+    left: 42%;
+    top: 35%;
+}
+
+.scroll-left-box{
+    position: absolute;
+    top: 45px;
+    left: 20px;
+    width:450px;
+    height:600px;
+    overflow:scroll;
+    padding: 5px;
+    background-color:#ffffff;
+    color:#fff;
+    border:4px solid #535455;
+    border-radius: 10px;
+}
+
+.scroll-right-box{
+    position: absolute;
+    top: 45px;
+    right:20px;
+    width:450px;
+    height:600px;
+    overflow:scroll;
+    padding: 5px;
+    background-color:#ffffff;
+    color:#fff;
+    border:4px solid #535455;
+    border-radius: 10px;
+}
+
+.game-box{
+    position: relative;
+    width: 90%;
+    height: 125px;
+    background-image: url(img/game_wallpaper.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 15px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+h1{
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+    margin-top:5px;
+    border: 3px solid #535455;
+    border-radius: 10px;
+    background-color: #2b6cd4;
+}
+
+.createpost-btn{
+    text-decoration: none;
+}
+
+.viewpost-btn{
+    text-decoration: none;
+}
+
+h2{
+    text-align: center;
+    padding-top: 40px;
+    color: #fff;
+    
+}

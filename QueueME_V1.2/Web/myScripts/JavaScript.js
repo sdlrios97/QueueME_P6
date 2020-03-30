@@ -1,4 +1,6 @@
-﻿function previewFile()
+﻿var modal = document.getElementById('notif');
+
+function previewFile()
 {
     var preview = document.querySelector('#preview');
   var file    = document.querySelector('input[type=file]').files[0];
@@ -15,7 +17,8 @@
   }
 }
 
-/**function myFunction()
-{
-    document.getElementById("frm1").submit();
-}*/
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

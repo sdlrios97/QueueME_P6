@@ -90,6 +90,12 @@ h1 {
 
 }
 
+.nav_sym 
+{
+    width: 70px;
+    height: 70px;
+}
+
 .nav_sym img {
     height: 50px;
     width: 50px;
@@ -108,8 +114,8 @@ h1 {
 .nav_sym .badge 
 {
     position: relative;
-    top: -10px;
-    right: 20px;
+    top: -48px;
+    right: -25px;
     padding: 5px 10px;
     border-radius: 50%;
     background-color: red;
@@ -121,57 +127,51 @@ h1 {
     margin-top: 75px;
 }
 
-.boxtop 
-{
-    border: 7.5px solid #343a40;
+.boxtop {
+    border: 7.5px solid #2b6cd4;
     background-color: #fcffff;
 }
 
-.boxbottom 
-{
-    border-left: 7.5px solid #343a40;
-    border-right: 7.5px solid #343a40;
-    border-bottom: 7.5px solid #343a40;
+.boxbottom {
+    border-left: 7.5px solid #2b6cd4;
+    border-right: 7.5px solid #2b6cd4;
+    border-bottom: 7.5px solid #2b6cd4;
     background-color: #fcffff;
 }
 
-.top_leftbox 
-{
+.top_leftbox {
     border-top-left-radius: 7.5px;
-    border-left: 7.5px solid #343a40;
-    border-top: 7.5px solid #343a40;
-    border-bottom: 7.5px solid #343a40;
+    border-left: 7.5px solid #2b6cd4;
+    border-top: 7.5px solid #2b6cd4;
+    border-bottom: 7.5px solid #2b6cd4;
     background-color: #fcffff;
 }
 
-.top_rightbox 
-{
+.top_rightbox {
     border-top-right-radius: 7.5px;
-    border-right: 7.5px solid #343a40;
-    border-top: 7.5px solid #343a40;
-    border-bottom: 7.5px solid #343a40;
+    border-right: 7.5px solid #2b6cd4;
+    border-top: 7.5px solid #2b6cd4;
+    border-bottom: 7.5px solid #2b6cd4;
     background-color: #fcffff;
 }
 
-.bottom_leftbox 
-{
+.bottom_leftbox {
     border-bottom-left-radius: 7.5px;
-    border-left: 7.5px solid #343a40;
-    border-bottom: 7.5px solid #343a40;
+    border-left: 7.5px solid #2b6cd4;
+    border-bottom: 7.5px solid #2b6cd4;
     background-color: #fcffff;
 }
 
-.bottom_rightbox 
-{
+.bottom_rightbox {
     border-bottom-right-radius: 7.5px;
-    border-right: 7.5px solid #343a40;
-    border-bottom: 7.5px solid #343a40;
+    border-right: 7.5px solid #2b6cd4;
+    border-bottom: 7.5px solid #2b6cd4;
     background-color: #fcffff;
 }
 
 input[type=submit] {
     width: 50%;
-    background-color: #343a40;
+    background-color: #2b6cd4;
     color: white;
     border: none;
     border-bottom-left-radius: 4px;
@@ -186,4 +186,29 @@ input[type=submit]:hover
     border-radius: 4px;
     background-color: red;
     color: white;
+}
+
+.nav-background {
+    background-color: #2b6cd4;
+}
+
+.notificates
+{
+    padding-top: 5px;
+    margin: 0px;
+    border-bottom-style: solid;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: #2b6cd4;
+}
+
+.notificates button
+{
+    text-align: center;
+    border-radius: 6px;
+}
+
+.notif_head
+{
+    background-color: #2b6cd4;
 }

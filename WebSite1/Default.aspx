@@ -2,16 +2,16 @@
 <html>
 <head>
 
-    <link rel="stylesheet" type="text/css" href="QueueME_v1/Vendor/CSS/normalize.css">
-    <link rel="stylesheet" type="text/css" href="QueueME_v1/Vendor/CSS/grid.css">
-    <link rel="stylesheet" type="text/css" href="QueueME_v1/Resources/CSS/DefaultPage_style.css">
+    <link rel="stylesheet" type="text/css" href="../QueueME_v1/Vendor/CSS/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../QueueME_v1/Vendor/CSS/grid.css">
+    <link rel="stylesheet" type="text/css" href="../QueueME_v1/Resources/CSS/DefaultPage_style.css">
     <title>QueueME/DefaultPage</title>
 </head>
 	<body>
 		<header>
 			<div class="big-text-box">
 				<h2>
-					<img src="Resources/CSS/img/logo_name1.png" alt="QueueME" style="width:600px;height: 250px;">
+					<img src="../QueueME_v1/Resources/CSS/img/logo_name1.png" alt="QueueME" style="width:600px;height: 250px;">
 				</h2>
 			</div>
 			<div class="small-text-box">

@@ -16,23 +16,23 @@
     <title>QueueME/Homepage</title>
 </head>
 <body>
-    <div class="nav-background"  style="z-index: 4">
+    <div class="nav-background" style="height: 70px;">
         <nav class="navbar navbar-expand-lg static-top" style="height: 70px;">
             <div class="nav-bar container">
                 <a class="navbar-brand" href="Homepage.html">
-                    <img class="nav_logo" src="../Resources/CSS/img/logo_name1.png" alt="QueueME" style="width:120px;height: 65px;">
+                    <img class="nav_logo" src="../Resources/CSS/img/logo_name1.png" alt="QueueME" style="width:120px; height: 65px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-				<div class="input-group md-form form-sm form-1 pl-0">
-					<div class="input-group-prepend">
-						<span class="input-group-text cyan lighten-2" id="basic-text1">
-							<button style="border: none;"><i class="fa fa-search" aria-hidden="true" style="color: #2b6cd4";"></i></button>
-						</span>
-					</div>
-					<input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
-				</div>
+                <div class="input-group md-form form-sm form-1 pl-0">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text cyan lighten-2" id="basic-text1">
+                            <button style="border: none;"><i class="fa fa-search" aria-hidden="true" style="color: #2b6cd4" ;"></i></button>
+                        </span>
+                    </div>
+                    <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
+                </div>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
@@ -40,7 +40,7 @@
                                 <button style="background: none; border: none;" onclick="document.getElementById('notif').style.display='block'"><img src="../Resources/CSS/img/notification_sym.png" /></button>
                                 <span class="badge">3</span>
                             </div>
-                            <div id="notif" class="w3-modal">
+                            <div id="notif" class="w3-modal" style="z-index: 999">
                                 <div class="w3-modal-content w3-card-4" style="width: 300px;">
                                     <header class="container w3-blue notif_head">
                                         <span onclick="document.getElementById('notif').style.display='none'" class="w3-button w3-display-topright">
@@ -63,7 +63,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="acc-bt nav-link nav_sym" href="#">
+                            <a class="acc-bt nav-link nav_sym" href="profile_view.html">
                                 <img src="../Resources/CSS/img/account-logo1.png" style="width: 50px; height: 50px;">
                             </a>
                         </li>
@@ -75,7 +75,7 @@
                     </ul>
                 </div>
             </div>
-        </nav>  
+        </nav>
     </div>
     <div class="main-box">
         <div class="center-box">

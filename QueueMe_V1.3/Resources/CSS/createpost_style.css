@@ -392,3 +392,13 @@ input[type=submit]:hover
     border: 7.5px solid #2b6cd4;
     background-color: #fcffff;
 }
+
+.scrollbox {
+    float: right;
+    width: 82%;
+    height: 800px;
+    overflow: scroll;
+    background-color: #fcffff;
+    border: 7.5px solid #2b6cd4;
+    border-bottom-left-radius: 10px;
+}

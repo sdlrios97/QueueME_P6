@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../Vendor/CSS/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../Vendor/CSS/grid.css">
+    <link rel="stylesheet" type="text/css" href="../Resources/CSS/createpost_style.css">
+    <link rel="stylesheet" type="text/css" href="../Content/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.0.0.slim.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <script src="myScripts/JavaScript.js"></script>
+    <title>QueueME/CreatePost</title>
+</head>
+<body>
+    <div class="nav-background">
+        <nav class="navbar navbar-expand-lg static-top" style="height: 70px;">
+            <div class="nav-bar container">
+                <a class="navbar-brand" href="Homepage.html">
+                    <img class="nav_logo" src="../Resources/CSS/img/logo_name1.png" alt="QueueME" style="width:120px;height: 65px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="input-group md-form form-sm form-1 pl-0">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text cyan lighten-2" id="basic-text1">
+                            <button style="border: none;"><i class="fa fa-search" aria-hidden="true" style="color: #2b6cd4" ;" onclick="window.location.href = '../Web/all_post.html'"></i></button>
+                        </span>
+                    </div>
+                    <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
+                </div>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <div class="nav-link nav_sym">
+                                <button style="background: none; border: none;" onclick="document.getElementById('notif').style.display='block'"><img src="../Resources/CSS/img/notification_sym.png" /></button>
+                                <span class="badge">3</span>
+                            </div>
+                            <div id="notif" class="w3-modal" style="z-index: 999">
+                                <div class="w3-modal-content w3-card-4" style="width: 300px;">
+                                    <header class="container w3-blue notif_head">
+                                        <span onclick="document.getElementById('notif').style.display='none'" class="w3-button w3-display-topright">
+                                            &times;
+                                        </span>
+                                        <h2>Notifications</h2>
+                                    </header>
+                                    <div class="container">
+                                        <div class="container notificates notificates">
+                                            <div class="">New Reply</div><button class="nav-link" onclick="window.location.href='../Web/Homepage.html';">View</button>
+                                        </div>
+                                        <div class="container notificates notificates">
+                                            New Applicant<button class="nav-link" onclick="window.location.href='../Web/Homepage.html';">View</button>
+                                        </div>
+                                        <div class="container notificates notificates">
+                                            New Update to UI<button class="nav-link" onclick="window.location.href='../Web/Homepage.html';">View</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="acc-bt nav-link nav_sym" href="#">
+                                <img src="../Resources/CSS/img/account-logo1.png" style="width: 50px; height: 50px;">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav_sym" href="../Default.html">
+                                <img src="../Resources/CSS/img/signout_sym.png" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="mainbody">
+        <div class="container">
+            <form id="frm1" action="profile_view.html" method="GET">
+                <div class="row no-gutters">
+                    <div class="col-sm m-0">
+                        <div class="boxborder_topleft">
+                            <input type="file" id="image" name="image" accept="image/x-png,image/gif,image/jpeg" onchange="previewFile()" />
+                            <img class="prof_img" id="preview" src="../resources/CSS/img/error.png" height="200" alt="Image preview...">
+                        </div>
+                    </div>
+                    <div class="col-sm m-0">
+                        <div class="boxborder_middle">
+                            <div class="prof_title">
+                                <strong>Details:</strong>
+                            </div>
+                            <textarea id="desc" name="desc" rows="8" cols="100" maxlength="256" style="resize: none; margin-top: 10px; margin-left: 5px; padding: 2.5px;"></textarea> <br /><br />
+                        </div>
+                    </div>
+                    <div class="col-sm m-0">
+                        <div class="boxborder_topright" style="text-align: center; justify-content: center;">
+                            <input type="submit" value="Save">
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-sm m-0">
+                        <div class="boxborder_bottomleft">
+                            <div class="prof_title">
+                                <strong>User Name:</strong>&ensp;
+                                <input type="text" id="username" name="username" /><br />
+                            </div>
+                            <div class="prof_title">
+                                <strong>Age:</strong>&ensp;
+                                <input type="text" id="agenum" name="agenum" /><br />
+                            </div>
+                            <div class="prof_title">
+                                <strong>Email:</strong>&ensp;
+                                <input type="text" id="email" name="email" /><br />
+                            </div>
+                            <div class="prof_title">
+                                <strong>Games:</strong>
+                                <ul class="game_list">
+                                    <li style="list-style-type: none; margin-left : 20px;">
+                                        <input type="checkbox" id="game1" name="game1" />Game 1<br />
+                                    </li>
+                                    <li style="list-style-type: none; margin-left : 20px;">
+                                        <input type="checkbox" id="game3" name="game2" />Game 3<br />
+                                    </li>
+                                    <li style="list-style-type: none; margin-left : 20px;">
+                                        <input type="checkbox" id="game5" name="game5" />Game 5<br />
+                                    </li>
+                                </ul>
+                                <br />
+                                <ul class="game_list">
+                                    <li style="list-style-type: none; margin-left : 20px;">
+                                        <input type="checkbox" id="game2" name="game2" />Game 2<br />
+                                    </li>
+                                    <li style="list-style-type: none; margin-left : 20px;">
+                                        <input type="checkbox" id="game4" name="game4" />Game 4<br />
+                                    </li>
+                                    <li style="list-style-type: none; margin-left : 20px;">
+                                        <input type="checkbox" id="game6" name="game6" />Game 6<br />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm m-0">
+                        <div class="boxborder_bottomright">
+                            <ul class="weekdays">
+                                <li>Mo</li>
+                                <li>Tu</li>
+                                <li>We</li>
+                                <li>Th</li>
+                                <li>Fr</li>
+                                <li>Sa</li>
+                                <li>Su</li>
+                            </ul>
+
+                            <ul class="days">
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li>6</li>
+                                <li>7</li>
+                                <li>8</li>
+                                <li>9</li>
+                                <li>10</li>
+                                <li>11</li>
+                                <li>12</li>
+                                <li>13</li>
+                                <li>14</li>
+                                <li>15</li>
+                                <li>16</li>
+                                <li>17</li>
+                                <li>18</li>
+                                <li>19</li>
+                                <li>20</li>
+                                <li>21</li>
+                                <li>22</li>
+                                <li>23</li>
+                                <li>24</li>
+                                <li>25</li>
+                                <li>26</li>
+                                <li>27</li>
+                                <li>28</li>
+                                <li>29</li>
+                                <li>30</li>
+                                <li>31</li>
+                                <li><span class="active">31</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -11,7 +11,7 @@
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <script src="../Scripts/jquery-3.0.0.slim.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
-    <script src="../Web/myScripts/JavaScript.js"></script>
+    <script src="myScripts/JavaScript.js"></script>
     <title>QueueME/CreatePost</title>
 </head>
 	<body onload="get_data()">
@@ -80,7 +80,7 @@
         <div class="container" style="margin-top: 50px;">
             <div class="center-box row">
                 <div class="boxborder_middle" style="width: 200px; height: 600px; border-bottom-left-radius: 10px; border-top-left-radius: 10px; border-right: none;">
-                    <div class="prof_title" style="height: 3.8%;">
+                    <div class="prof_title">
                         <strong>Filters:</strong>
                     </div>
                     <div class="prof_text">
@@ -102,9 +102,6 @@
                         <input type="checkbox" id="game4" name="games" /> Game 4<br />&nbsp
                         <input type="checkbox" id="game5" name="games" /> Game 5<br />&nbsp
                         <input type="checkbox" id="game6" name="games" /> Game 6<br />&nbsp
-                    </div>
-                    <div id="reporting" style="width: 150px; height: 80px;">
-                        <input style="width: 100px;" type="button" value="Report" onclick="report()">
                     </div>
                 </div>
                 <div class="scrollbox flex-row-reverse">
@@ -142,6 +139,9 @@
                         <div id="application" style="width: 170px; height: 80px;">
                             <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
                         </div>
+                        <div id="reporting" style="width: 150px; height: 80px;">
+                            <input style="width: 100px;" type="button" value="Report" onclick="report()">
+                        </div>
                     </div>
                     <div class="row no-gutters">
                         <div class="col-sm m-0 top_leftbox">
@@ -177,75 +177,8 @@
                         <div id="application" style="width: 170px; height: 80px;">
                             <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
                         </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="col-sm m-0 top_leftbox">
-                            <div class="prof_title">
-                                <strong>Game:</strong>
-                            </div>
-                            <p class="prof_text">Game 1</p>
-                        </div>
-                        <div class="col-sm m-0 boxtop" style="width: 50px;">
-                            <div class="prof_title">
-                                <strong>Title:</strong>
-                            </div>
-                            <p class="prof_text">Lonely Gamer :(</p>
-                        </div>
-                        <div class="col-sm m-0 boxtop" style="border-left: none; width: 50px;">
-                            <div class="prof_title">
-                                <strong>Description:</strong>
-                            </div>
-                            <p class="prof_text">
-                                Went through a rough week and am looking for new buddies to play with. You can also reach ...
-                            </p>
-                        </div>
-                        <div class="col-sm m-0 top_rightbox">
-                            <div class="prof_title">
-                                <strong>User Name:</strong>
-                            </div>
-                            <a class="acc-bt nav-link nav_sym" href="profile_view.html">
-                                <p class="prof_text">BigBubowski</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div id="application" style="width: 170px; height: 80px;">
-                            <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="col-sm m-0 top_leftbox">
-                            <div class="prof_title">
-                                <strong>Game:</strong>
-                            </div>
-                            <p class="prof_text">Game 6</p>
-                        </div>
-                        <div class="col-sm m-0 boxtop" style="width: 50px;">
-                            <div class="prof_title">
-                                <strong>Title:</strong>
-                            </div>
-                            <p class="prof_text">Games with Seniors</p>
-                        </div>
-                        <div class="col-sm m-0 boxtop" style="border-left: none; width: 50px;">
-                            <div class="prof_title">
-                                <strong>Description:</strong>
-                            </div>
-                            <p class="prof_text">
-                                Hello, my name is Jeff. I am an 82 year old retired mechanic. I am looking for older people who ...
-                            </p>
-                        </div>
-                        <div class="col-sm m-0 top_rightbox">
-                            <div class="prof_title">
-                                <strong>User Name:</strong>
-                            </div>
-                            <a class="acc-bt nav-link nav_sym" href="profile_view.html">
-                                <p class="prof_text">JeFf1934</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div id="application" style="width: 170px; height: 80px;">
-                            <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
+                        <div id="reporting" style="width: 150px; height: 80px;">
+                            <input style="width: 100px;" type="button" value="Report" onclick="report()">
                         </div>
                     </div>
                     <div class="row no-gutters">
@@ -282,40 +215,8 @@
                         <div id="application" style="width: 170px; height: 80px;">
                             <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
                         </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="col-sm m-0 top_leftbox">
-                            <div class="prof_title">
-                                <strong>Game:</strong>
-                            </div>
-                            <p class="prof_text">Game 3</p>
-                        </div>
-                        <div class="col-sm m-0 boxtop" style="width: 50px;">
-                            <div class="prof_title">
-                                <strong>Title:</strong>
-                            </div>
-                            <p class="prof_text">Mod Team</p>
-                        </div>
-                        <div class="col-sm m-0 boxtop" style="border-left: none; width: 50px;">
-                            <div class="prof_title">
-                                <strong>Description:</strong>
-                            </div>
-                            <p class="prof_text">
-                                Looking for applicants intersted in moderating a server for Game 3. You can also visit our ...
-                            </p>
-                        </div>
-                        <div class="col-sm m-0 top_rightbox">
-                            <div class="prof_title">
-                                <strong>User Name:</strong>
-                            </div>
-                            <a class="acc-bt nav-link nav_sym" href="profile_view.html">
-                                <p class="prof_text">OfficialModBobby</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div id="application" style="width: 170px; height: 80px;">
-                            <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
+                        <div id="reporting" style="width: 150px; height: 80px;">
+                            <input style="width: 100px;" type="button" value="Report" onclick="report()">
                         </div>
                     </div>
                 </div>

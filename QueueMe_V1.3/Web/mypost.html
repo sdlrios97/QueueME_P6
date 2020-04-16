@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+
     <link rel="stylesheet" type="text/css" href="../Vendor/CSS/normalize.css">
     <link rel="stylesheet" type="text/css" href="../Vendor/CSS/grid.css">
     <link rel="stylesheet" type="text/css" href="../Resources/CSS/createpost_style.css">
@@ -13,7 +14,7 @@
 	<script src="myScripts/JavaScript.js"></script>
     <title>QueueME/CreatePost</title>
 </head>
-	<body>
+	<body onload="get_data()">
 		<div class="nav-background">
 			<nav class="navbar navbar-expand-lg static-top" style="height: 70px;">
 				<div class="nav-bar container">
@@ -75,60 +76,79 @@
 				</div>
 			</nav>  
 		</div>
-		<div class="mainbody">
-			<div class="container">
-				<form id="frm1" action="mypost.html" method="GET">
-					<div class="row">
-						<div class="col-md-4 col-6 top_leftbox">
-							<label for="game">Game:</label><br />&nbsp
-							<select id="game" name="game">
-								<option value="game1">Game 1</option>
-								<option value="game2">Game 2</option>
-								<option value="game3">Game 3</option>
-							</select> <br />&nbsp
-						</div>
-						<div class="col-md-4 col-6 boxtop">
-							<label for="title">Title:</label><br />&nbsp
-							<input type="text" id="title" name="title" /><br />
-						</div>
-						<div class="col-md-4 col-6 top_rightbox">
-							<p>User Name:<br />Your Username</p>
-						</div>
-					</div>
-					<div  class="row">
-						<div class="col-md-4 col-6 bottom_leftbox">
-							<label for="description">Description:</label><br />&nbsp
-							<textarea id="descTwo" name="desc" rows="10" cols="35" maxlength="256" style="resize: none;"></textarea> <br /><br />
-						</div>
-						<div class="col-md-4 col-6 boxbottom">
-							<label for="tags">Tags:</label><br />&nbsp
-							<input type="checkbox" id="tag_adventure" name="tags" /> Adventure<br />&nbsp
-							<input type="checkbox" id="tag_action" name="tags" /> Action<br />&nbsp
-							<input type="checkbox" id="tag_casual" name="tags" /> Casual<br />&nbsp
-							<input type="checkbox" id="tag_competitive" name="tags" /> Competitive<br />&nbsp
-							<input type="checkbox" id="tag_cooperative" name="tags" /> Cooperative<br />&nbsp
-							<input type="checkbox" id="tag_creative" name="tags" /> Creative<br />&nbsp
-							<input type="checkbox" id="tag_puzzle" name="tags" /> Puzzle<br />&nbsp
-							<input type="checkbox" id="tag_rpg" name="tags" /> RPG<br />&nbsp
-							<input type="checkbox" id="tag_racing" name="tags" /> Racing<br />&nbsp
-							<input type="checkbox" id="tag_shooter" name="tags" /> Shooter<br /><br />&nbsp
-                            <div>
-                                <p>Hello World!</p>
+        <div class="mainbody">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-6 top_leftbox">
+                        <div class="prof_title">
+                            <strong>Game:</strong>
+                        </div>
+                        <p class="prof_text">Game 1</p>
+                    </div>
+                    <div class="col-md-4 col-6 boxtop">
+                        <div class="prof_title">
+                            <strong>Title:</strong>
+                        </div>
+                        <p class="prof_text">A Post Title</p>
+                    </div>
+                    <div class="col-md-4 col-6 top_rightbox">
+                        <div class="prof_title">
+                            <strong>User Name:</strong>
+                        </div>
+                        <a class="acc-bt nav-link nav_sym" href="profile_view.html">
+                            <p class="prof_text">TheUserName</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-6 bottom_leftbox">
+                        <div class="prof_title">
+                            <strong>Description:</strong>
+                        </div>
+                        <p class="prof_text">
+                            In this text area you'll be able to see more specific information about the post that the user can write out themselves. This text area should also be limited to a certain amount of characters.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-6 boxbottom">
+                        <div class="prof_title">
+                            <strong>Tags:</strong>
+                            <ul class="game_list">
+                                <li>Adventure</li>
+                                <li>Casual</li>
+                            </ul>
+                            <br />
+                            <ul class="game_list">
+                                <li>Creative</li>
+                                <li>Puzzle</li>
+                            </ul>
+                            <br />
+                            <ul class="game_list">
+                                <li>Cooperative</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 bottom_rightbox">
+                        <img src="../Resources/CSS/img/Default.jpg" style="height: 225.45px; width: 360.72px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col comments" id="comupload">
+                    <div class="prof_title">
+                        <div class="row">
+                            <strong>Comments:</strong>
+                            <div id="application" style="width: 100px; position: absolute; right: 0px;">
+                                <input style="width: 100px;" type="button" value="Submit" onclick="comment()">
                             </div>
-						</div>
-						<div class="col-md-4 col-6 bottom_rightbox">
-							<label for="image">Image:</label><br />&nbsp
-							<input type="file" id="image" name="image" accept="image/x-png,image/gif,image/jpeg" onchange="previewFile()" />
-							<img class="prof_img" id="preview" src="../resources/CSS/img/error.png" height="200" alt="Image preview...">
-						</div>
-					</div>
-					<div class="row flex-row-reverse">
-						<div style="width: 250px; height: 80px;">
-							<input type="submit" value="Create">
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
+                        </div>
+                    </div>
+                    <div class="prof_text">
+                        <textarea id="desc" name="desc" rows="4" cols="130" maxlength="256"></textarea> <br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
 	</body>
 </html>

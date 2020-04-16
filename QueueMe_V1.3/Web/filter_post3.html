@@ -37,10 +37,10 @@
 					<div class="collapse navbar-collapse" id="navbarResponsive">
 						<ul class="navbar-nav ml-auto">
 							<li class="nav-item active">
-								<div class="nav-link nav_sym">
-									<button style="background: none; border: none;" onclick="document.getElementById('notif').style.display='block'"><img src="../Resources/CSS/img/notification_sym.png" /></button>
-									<span class="badge">3</span>
-								</div>
+                                <div class="nav-link nav_sym" onclick="document.getElementById('notif').style.display='block'">
+                                    <button style="background: none; border: none;"><img src="../Resources/CSS/img/notification_sym.png" /></button>
+                                    <span class="badge">3</span>
+                                </div>
 								<div id="notif" class="w3-modal" style="z-index: 999">
 									<div class="w3-modal-content w3-card-4" style="width: 300px;">
 										<header class="container w3-blue notif_head"> 
@@ -50,10 +50,10 @@
 										</header>
 										<div class="container">
 											<div class="container notificates notificates">
-												<div class="">New Reply</div><button class="nav-link" onclick="window.location.href='../Web/Homepage.html';">View</button>
+												<div class="">New Reply</div><button class="nav-link" onclick="window.location.href='../Web/post.html';">View</button>
 											</div>
 											<div class="container notificates notificates">
-												New Applicant<button class="nav-link" onclick="window.location.href='../Web/Homepage.html';">View</button>
+												New Applicant<button class="nav-link" onclick="window.location.href='../Web/post.html';">View</button>
 											</div>
 											<div class="container notificates notificates">
 												New Update to UI<button class="nav-link" onclick="window.location.href='../Web/Homepage.html';">View</button>
@@ -68,9 +68,9 @@
                                 </a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link nav_sym" href="../Default.html">
-									<img src="../Resources/CSS/img/signout_sym.png" />
-								</a>
+                                <a class="nav-link nav_sym" href="../Default.html">
+                                    <h2 style="font-size: 25px; position: absolute; padding-top: 10px;">Sign Out</h2>
+                                </a>
 							</li>
 						</ul>
 					</div>
@@ -80,7 +80,7 @@
         <div class="container" style="margin-top: 50px;">
             <div class="center-box row">
                 <div class="boxborder_middle" style="width: 200px; height: 600px; border-bottom-left-radius: 10px; border-top-left-radius: 10px; border-right: none;">
-                    <div class="prof_title">
+                    <div class="prof_title" style="height: 3.8%;">
                         <strong>Filters:</strong>
                     </div>
                     <div class="prof_text">
@@ -102,6 +102,9 @@
                         <input type="checkbox" id="game4" name="games" /> Game 4<br />&nbsp
                         <input type="checkbox" id="game5" name="games" /> Game 5<br />&nbsp
                         <input type="checkbox" id="game6" name="games" /> Game 6<br />&nbsp
+                    </div>
+                    <div id="reporting" style="width: 150px; height: 80px;">
+                        <input style="width: 100px;" type="button" value="Apply" onclick="openSite()">
                     </div>
                 </div>
                 <div class="scrollbox flex-row-reverse">
@@ -136,11 +139,11 @@
                         </div>
                     </div>
                     <div class="row no-gutters">
-                        <div id="application" style="width: 170px; height: 80px;">
+                        <div id="application" style="width: 130px; height: 80px;">
                             <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
                         </div>
-                        <div id="reporting" style="width: 150px; height: 80px;">
-                            <input style="width: 100px;" type="button" value="Report" onclick="report()">
+                        <div id="interesting" style="width: 120px; height: 80px;">
+                            <input style="width: 100px;" type="button" value="Interested" onclick="interested()">
                         </div>
                     </div>
                     <div class="row no-gutters">
@@ -174,11 +177,11 @@
                         </div>
                     </div>
                     <div class="row no-gutters">
-                        <div id="application" style="width: 170px; height: 80px;">
+                        <div id="application" style="width: 130px; height: 80px;">
                             <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
                         </div>
-                        <div id="reporting" style="width: 150px; height: 80px;">
-                            <input style="width: 100px;" type="button" value="Report" onclick="report()">
+                        <div id="interestingOne" style="width: 120px; height: 80px;">
+                            <input style="width: 100px;" type="button" value="Interested" onclick="interestedOne()">
                         </div>
                     </div>
                     <div class="row no-gutters">
@@ -212,11 +215,11 @@
                         </div>
                     </div>
                     <div class="row no-gutters">
-                        <div id="application" style="width: 170px; height: 80px;">
+                        <div id="application" style="width: 130px; height: 80px;">
                             <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
                         </div>
-                        <div id="reporting" style="width: 150px; height: 80px;">
-                            <input style="width: 100px;" type="button" value="Report" onclick="report()">
+                        <div id="interestingTwo" style="width: 120px; height: 80px;">
+                            <input style="width: 100px;" type="button" value="Interested" onclick="interestedTwo()">
                         </div>
                     </div>
                     <div class="row no-gutters">
@@ -250,11 +253,11 @@
                         </div>
                     </div>
                     <div class="row no-gutters">
-                        <div id="application" style="width: 170px; height: 80px;">
+                        <div id="application" style="width: 130px; height: 80px;">
                             <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
                         </div>
-                        <div id="reporting" style="width: 150px; height: 80px;">
-                            <input style="width: 100px;" type="button" value="Report" onclick="report()">
+                        <div id="interestingThree" style="width: 120px; height: 80px;">
+                            <input style="width: 100px;" type="button" value="Interested" onclick="interestedThree()">
                         </div>
                     </div>
                 </div>

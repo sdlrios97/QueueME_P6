@@ -90,10 +90,24 @@ h1 {
 
 }
 
-.nav_sym 
+.nav_sym
 {
     width: 70px;
     height: 70px;
+}
+
+.nav_sym h2
+{
+    -webkit-filter: invert(0);
+    filter: invert(0);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.nav_sym h2:hover
+{
+    -webkit-filter: invert(20%);
+    filter: invert(20%);
 }
 
 .nav_sym img {
@@ -401,4 +415,58 @@ input[type=submit]:hover
     background-color: #fcffff;
     border: 7.5px solid #2b6cd4;
     border-bottom-left-radius: 10px;
+}
+
+#desc 
+{
+    resize: none;
+    margin-top: 10px;
+    margin-left: 5px;
+    padding-top: 2.5px;
+    width: calc(55vw - 5px);
+    height: calc(25vh - 10px);
+    resize: none;
+    max-width: 56vw;
+}
+
+#descTwo 
+{
+    resize: none;
+    margin-top: 10px;
+    margin-left: 5px;
+    padding-top: 2.5px;
+    width: calc(17vw - 5px);
+    height: calc(25vh - 10px);
+    resize: none;
+    max-width: 18vw;
+}
+
+#descThree 
+{
+    resize: none;
+    margin-top: 10px;
+    margin-left: 7px;
+    padding-top: 2.5px;
+    width: calc(37.5vw - 5px);
+    height: calc(20vh - 5px);
+    resize: none;
+    max-width: 40vw;
+}
+
+.game_back 
+{
+    color: #2b6cd4;
+    position: absolute;
+    top: 40px;
+    left: 32%;
+    height: 50px;
+    width: 140px;
+    border: 5px solid #2b6cd4;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.headOne
+{
+    font-size: 31px;
 }

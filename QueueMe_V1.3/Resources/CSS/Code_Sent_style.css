@@ -42,12 +42,12 @@ h2{
 .small-text-box{
     position: absolute;
     width: 375px;
-    height: 310px;
+    height: 180px;
     left: 10px;
     top: 270px;
     background-color: rgba(43, 108, 212, 0.4);
     margin: 0;
-    border-radius: 20px
+    border-radius: 20px;
 }
 
 h1{
@@ -58,27 +58,27 @@ h1{
     font-size: 20px;
 }
 
+.small_t_h{
+    text-align: center;
+    position: relative;
+    right: 10px;
+    /*border: 1px solid black;*/
+ 
+}
+
 .text{
     width: 300px;
     height: 30px;
     margin-left: 10px;
     margin-bottom: 30px;
-    background-color: #fff;
+    background-color: #000;
 }
 
 .text-Email{
     position: relative;    
 }
 
-.text-Username{
-    position: relative;
-}
-
-.text-Password{
-    position: relative;
-}
-
-.btn-Login{
+.btn-Home{
     color: #fff;
     border: 1px solid;
     border-color: #fff;
@@ -90,9 +90,4 @@ h1{
     background-color: rgba(252, 251, 0, 0.70);
     border-radius: 20px;
     padding: 10px;
-}
-
-.btn-FP{
-    text-decoration-color: yellow;
-    color: yellow;
 }

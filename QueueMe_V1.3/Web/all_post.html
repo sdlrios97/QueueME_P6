@@ -11,7 +11,7 @@
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <script src="../Scripts/jquery-3.0.0.slim.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
-    <script src="../Web/myScripts/JavaScript.js"></script>
+    <script src="myScripts/JavaScript.js"></script>
     <title>QueueME/CreatePost</title>
 </head>
 	<body onload="get_data()">
@@ -37,10 +37,10 @@
 					<div class="collapse navbar-collapse" id="navbarResponsive">
 						<ul class="navbar-nav ml-auto">
 							<li class="nav-item active">
-								<div class="nav-link nav_sym">
-									<button style="background: none; border: none;" onclick="document.getElementById('notif').style.display='block'"><img src="../Resources/CSS/img/notification_sym.png" /></button>
-									<span class="badge">3</span>
-								</div>
+                                <div class="nav-link nav_sym" onclick="document.getElementById('notif').style.display='block'">
+                                    <button style="background: none; border: none;"><img src="../Resources/CSS/img/notification_sym.png" /></button>
+                                    <span class="badge">3</span>
+                                </div>
 								<div id="notif" class="w3-modal" style="z-index: 999">
 									<div class="w3-modal-content w3-card-4" style="width: 300px;">
 										<header class="container w3-blue notif_head"> 
@@ -50,10 +50,10 @@
 										</header>
 										<div class="container">
 											<div class="container notificates notificates">
-												<div class="">New Reply</div><button class="nav-link" onclick="window.location.href='../Web/Homepage.html';">View</button>
+												<div class="">New Reply</div><button class="nav-link" onclick="window.location.href='../Web/post.html';">View</button>
 											</div>
 											<div class="container notificates notificates">
-												New Applicant<button class="nav-link" onclick="window.location.href='../Web/Homepage.html';">View</button>
+												New Applicant<button class="nav-link" onclick="window.location.href='../Web/post.html';">View</button>
 											</div>
 											<div class="container notificates notificates">
 												New Update to UI<button class="nav-link" onclick="window.location.href='../Web/Homepage.html';">View</button>
@@ -68,9 +68,9 @@
                                 </a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link nav_sym" href="../Default.html">
-									<img src="../Resources/CSS/img/signout_sym.png" />
-								</a>
+                                <a class="nav-link nav_sym" href="../Default.html">
+                                    <h2 style="font-size: 25px; position: absolute; padding-top: 10px;">Sign Out</h2>
+                                </a>
 							</li>
 						</ul>
 					</div>
@@ -104,7 +104,7 @@
                         <input type="checkbox" id="game6" name="games" /> Game 6<br />&nbsp
                     </div>
                     <div id="reporting" style="width: 150px; height: 80px;">
-                        <input style="width: 100px;" type="button" value="Report" onclick="report()">
+                        <input style="width: 100px;" type="button" value="Apply" onclick="openSite()">
                     </div>
                 </div>
                 <div class="scrollbox flex-row-reverse">
@@ -139,8 +139,11 @@
                         </div>
                     </div>
                     <div class="row no-gutters">
-                        <div id="application" style="width: 170px; height: 80px;">
+                        <div id="application" style="width: 130px; height: 80px;">
                             <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
+                        </div>
+                        <div id="interesting" style="width: 120px; height: 80px;">
+                            <input style="width: 100px;" type="button" value="Interested" onclick="interested()">
                         </div>
                     </div>
                     <div class="row no-gutters">
@@ -174,8 +177,11 @@
                         </div>
                     </div>
                     <div class="row no-gutters">
-                        <div id="application" style="width: 170px; height: 80px;">
+                        <div id="application" style="width: 130px; height: 80px;">
                             <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
+                        </div>
+                        <div id="interestingOne" style="width: 120px; height: 80px;">
+                            <input style="width: 100px;" type="button" value="Interested" onclick="interestedOne()">
                         </div>
                     </div>
                     <div class="row no-gutters">
@@ -209,8 +215,11 @@
                         </div>
                     </div>
                     <div class="row no-gutters">
-                        <div id="application" style="width: 170px; height: 80px;">
+                        <div id="application" style="width: 130px; height: 80px;">
                             <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
+                        </div>
+                        <div id="interestingTwo" style="width: 120px; height: 80px;">
+                            <input style="width: 100px;" type="button" value="Interested" onclick="interestedTwo()">
                         </div>
                     </div>
                     <div class="row no-gutters">
@@ -244,8 +253,11 @@
                         </div>
                     </div>
                     <div class="row no-gutters">
-                        <div id="application" style="width: 170px; height: 80px;">
+                        <div id="application" style="width: 130px; height: 80px;">
                             <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
+                        </div>
+                        <div id="interestingThree" style="width: 120px; height: 80px;">
+                            <input style="width: 100px;" type="button" value="Interested" onclick="interestedThree()">
                         </div>
                     </div>
                     <div class="row no-gutters">
@@ -279,8 +291,11 @@
                         </div>
                     </div>
                     <div class="row no-gutters">
-                        <div id="application" style="width: 170px; height: 80px;">
+                        <div id="application" style="width: 130px; height: 80px;">
                             <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
+                        </div>
+                        <div id="interestingFour" style="width: 120px; height: 80px;">
+                            <input style="width: 100px;" type="button" value="Interested" onclick="interestedFour()">
                         </div>
                     </div>
                     <div class="row no-gutters">
@@ -314,8 +329,11 @@
                         </div>
                     </div>
                     <div class="row no-gutters">
-                        <div id="application" style="width: 170px; height: 80px;">
+                        <div id="application" style="width: 130px; height: 80px;">
                             <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
+                        </div>
+                        <div id="interestingFive" style="width: 120px; height: 80px;">
+                            <input style="width: 100px;" type="button" value="Interested" onclick="interestedFive()">
                         </div>
                     </div>
                 </div>

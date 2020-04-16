@@ -100,28 +100,39 @@
 							<label for="description">Description:</label><br />&nbsp
 							<textarea id="descTwo" name="desc" rows="10" cols="35" maxlength="256" style="resize: none;"></textarea> <br /><br />
 						</div>
-						<div class="col-md-4 col-6 boxbottom">
-							<label for="tags">Tags:</label><br />&nbsp
-							<input type="checkbox" id="tag_adventure" name="tags" /> Adventure<br />&nbsp
-							<input type="checkbox" id="tag_action" name="tags" /> Action<br />&nbsp
-							<input type="checkbox" id="tag_casual" name="tags" /> Casual<br />&nbsp
-							<input type="checkbox" id="tag_competitive" name="tags" /> Competitive<br />&nbsp
-							<input type="checkbox" id="tag_cooperative" name="tags" /> Cooperative<br />&nbsp
-							<input type="checkbox" id="tag_creative" name="tags" /> Creative<br />&nbsp
-							<input type="checkbox" id="tag_puzzle" name="tags" /> Puzzle<br />&nbsp
-							<input type="checkbox" id="tag_rpg" name="tags" /> RPG<br />&nbsp
-							<input type="checkbox" id="tag_racing" name="tags" /> Racing<br />&nbsp
-							<input type="checkbox" id="tag_shooter" name="tags" /> Shooter<br /><br />&nbsp
-                            <div>
-                                <p>Hello World!</p>
+                        <div class="col-md-4 col-6 boxbottom">
+                            <div class="row">
+                                <div style="padding-left: 20px;">
+                                    <label for="tags">Tags:</label><br />&nbsp
+                                    <input type="checkbox" id="tag_adventure" name="tags" /> Adventure<br />&nbsp
+                                    <input type="checkbox" id="tag_action" name="tags" /> Action<br />&nbsp
+                                    <input type="checkbox" id="tag_casual" name="tags" /> Casual<br />&nbsp
+                                    <input type="checkbox" id="tag_competitive" name="tags" /> Competitive<br />&nbsp
+                                    <input type="checkbox" id="tag_cooperative" name="tags" /> Cooperative<br />&nbsp
+                                    <input type="checkbox" id="tag_creative" name="tags" /> Creative<br />&nbsp
+                                    <input type="checkbox" id="tag_puzzle" name="tags" /> Puzzle<br />&nbsp
+                                    <input type="checkbox" id="tag_rpg" name="tags" /> RPG<br />&nbsp
+                                    <input type="checkbox" id="tag_racing" name="tags" /> Racing<br />&nbsp
+                                    <input type="checkbox" id="tag_shooter" name="tags" /> Shooter<br /><br />&nbsp
+                                </div>
+                                <div style="padding-left: 100px;">
+                                    <label for="tags">Skill Level:</label><br />&nbsp
+                                    <input type="checkbox" id="tag_Professional" name="tags" /> Professional<br />&nbsp
+                                    <input type="checkbox" id="tag_Experienced" name="tags" /> Experienced<br />&nbsp
+                                    <input type="checkbox" id="tag_Good" name="tags" /> Good<br />&nbsp
+                                    <input type="checkbox" id="tag_Fair" name="tags" /> Fair<br />&nbsp
+                                    <input type="checkbox" id="tag_Casual" name="tags" /> Casual<br />&nbsp
+                                    <input type="checkbox" id="tag_Beginner" name="tags" /> Beginner<br />&nbsp
+                                    <input type="checkbox" id="tag_None" name="tags" /> None<br />&nbsp
+                                </div>
                             </div>
-						</div>
-						<div class="col-md-4 col-6 bottom_rightbox">
-							<label for="image">Image:</label><br />&nbsp
-							<input type="file" id="image" name="image" accept="image/x-png,image/gif,image/jpeg" onchange="previewFile()" />
-							<img class="prof_img" id="preview" src="../resources/CSS/img/error.png" height="200" alt="Image preview...">
-						</div>
-					</div>
+                        </div>
+                        <div class="col-md-4 col-6 bottom_rightbox">
+                            <label for="image">Image:</label><br />&nbsp
+                            <input type="file" id="image" name="image" accept="image/x-png,image/gif,image/jpeg" onchange="previewFile()" />
+                            <img class="prof_img" id="preview" src="../resources/CSS/img/error.png" height="200" alt="Image preview...">
+                        </div>
+                    </div>
 					<div class="row flex-row-reverse">
 						<div style="width: 250px; height: 80px;">
 							<input type="submit" value="Create">

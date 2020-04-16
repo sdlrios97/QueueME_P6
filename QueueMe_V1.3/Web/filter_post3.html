@@ -79,34 +79,6 @@
 		</div>
         <div class="container" style="margin-top: 50px;">
             <div class="center-box row">
-                <div class="boxborder_middle" style="width: 200px; height: 600px; border-bottom-left-radius: 10px; border-top-left-radius: 10px; border-right: none;">
-                    <div class="prof_title" style="height: 3.8%;">
-                        <strong>Filters:</strong>
-                    </div>
-                    <div class="prof_text">
-                        <label for="tags">Tags:</label><br />&nbsp
-                        <input type="checkbox" id="tag_adventure" name="tags" /> Adventure<br />&nbsp
-                        <input type="checkbox" id="tag_action" name="tags" /> Action<br />&nbsp
-                        <input type="checkbox" id="tag_casual" name="tags" /> Casual<br />&nbsp
-                        <input type="checkbox" id="tag_competitive" name="tags" /> Competitive<br />&nbsp
-                        <input type="checkbox" id="tag_cooperative" name="tags" /> Cooperative<br />&nbsp
-                        <input type="checkbox" id="tag_creative" name="tags" /> Creative<br />&nbsp
-                        <input type="checkbox" id="tag_puzzle" name="tags" /> Puzzle<br />&nbsp
-                        <input type="checkbox" id="tag_rpg" name="tags" /> RPG<br />&nbsp
-                        <input type="checkbox" id="tag_racing" name="tags" /> Racing<br />&nbsp
-                        <input type="checkbox" id="tag_shooter" name="tags" /> Shooter<br /><br />&nbsp
-                        <label for="tags">Games:</label><br />&nbsp
-                        <input type="checkbox" id="game1" name="games" /> Game 1<br />&nbsp
-                        <input type="checkbox" id="game2" name="games" /> Game 2<br />&nbsp
-                        <input type="checkbox" id="game3" name="games" /> Game 3<br />&nbsp
-                        <input type="checkbox" id="game4" name="games" /> Game 4<br />&nbsp
-                        <input type="checkbox" id="game5" name="games" /> Game 5<br />&nbsp
-                        <input type="checkbox" id="game6" name="games" /> Game 6<br />&nbsp
-                    </div>
-                    <div id="reporting" style="width: 150px; height: 80px;">
-                        <input style="width: 100px;" type="button" value="Apply" onclick="openSite()">
-                    </div>
-                </div>
                 <div class="scrollbox flex-row-reverse">
                     <div class="row no-gutters">
                         <div class="col-sm m-0 top_leftbox">
@@ -135,6 +107,8 @@
                             </div>
                             <a class="acc-bt nav-link nav_sym" href="profile_view.html">
                                 <p class="prof_text">JoeShmo</p>
+                                <p id="someDate" style="width: 150px; margin-top: 50px;"></p>
+                                <script>getDates();</script>
                             </a>
                         </div>
                     </div>
@@ -173,6 +147,8 @@
                             </div>
                             <a class="acc-bt nav-link nav_sym" href="profile_view.html">
                                 <p class="prof_text">MarkIE1000101</p>
+                                <p id="someDateTwo" style="width: 150px; margin-top: 50px;"></p>
+                                <script>getDatesTwo();</script>
                             </a>
                         </div>
                     </div>
@@ -211,6 +187,8 @@
                             </div>
                             <a class="acc-bt nav-link nav_sym" href="profile_view.html">
                                 <p class="prof_text">BigBubowski</p>
+                                <p id="someDateFour" style="width: 150px; margin-top: 50px;"></p>
+                                <script>getDatesFour();</script>
                             </a>
                         </div>
                     </div>
@@ -249,6 +227,8 @@
                             </div>
                             <a class="acc-bt nav-link nav_sym" href="profile_view.html">
                                 <p class="prof_text">Five5Lover</p>
+                                <p id="someDateFive" style="width: 150px; margin-top: 50px;"></p>
+                                <script>getDatesFive();</script>
                             </a>
                         </div>
                     </div>
@@ -259,6 +239,48 @@
                         <div id="interestingThree" style="width: 120px; height: 80px;">
                             <input style="width: 100px;" type="button" value="Interested" onclick="interestedThree()">
                         </div>
+                    </div>
+                </div>
+                <div class="boxborder_middle" style="width: 200px; height: 724px; border-bottom-right-radius: 10px; border-top-right-radius: 10px; border-left: none;">
+                    <div class="prof_title" style="height: 3.8%;">
+                        <strong>Filters:</strong>
+                    </div>
+                    <div class="prof_text">
+                        <label for="tags" style="margin-bottom: 0px;">Tags:</label>&nbsp
+                        <div>
+                            <input type="checkbox" id="tag_adventure" name="tags" /> Adventure<br />&nbsp
+                            <input type="checkbox" id="tag_action" name="tags" /> Action<br />&nbsp
+                            <input type="checkbox" id="tag_casual" name="tags" /> Casual<br />&nbsp
+                            <input type="checkbox" id="tag_competitive" name="tags" /> Competitive<br />&nbsp
+                            <input type="checkbox" id="tag_cooperative" name="tags" /> Cooperative<br />&nbsp
+                            <input type="checkbox" id="tag_creative" name="tags" /> Creative<br />&nbsp
+                            <input type="checkbox" id="tag_puzzle" name="tags" /> Puzzle<br />&nbsp
+                            <input type="checkbox" id="tag_rpg" name="tags" /> RPG<br />&nbsp
+                            <input type="checkbox" id="tag_racing" name="tags" /> Racing<br />&nbsp
+                            <input type="checkbox" id="tag_shooter" name="tags" /> Shooter &nbsp
+                        </div>
+                        <label for="tags" style="margin-bottom: 0px;">Games:</label>&nbsp
+                        <div>
+                            <input type="checkbox" id="game1" name="games" /> Game 1<br />&nbsp
+                            <input type="checkbox" id="game2" name="games" /> Game 2<br />&nbsp
+                            <input type="checkbox" id="game3" name="games" /> Game 3<br />&nbsp
+                            <input type="checkbox" id="game4" name="games" /> Game 4<br />&nbsp
+                            <input type="checkbox" id="game5" name="games" /> Game 5<br />&nbsp
+                            <input type="checkbox" id="game6" name="games" /> Game 6 &nbsp
+                        </div>
+                        <label for="tags" style="margin-bottom: 0px;">Skill Level:</label>&nbsp
+                        <div>
+                            <input type="checkbox" id="tag_Professional" name="games" /> Professional<br />&nbsp
+                            <input type="checkbox" id="tag_Experienced" name="games" /> Experienced<br />&nbsp
+                            <input type="checkbox" id="tag_Good" name="games" /> Good<br />&nbsp
+                            <input type="checkbox" id="tag_Fair" name="games" /> Fair<br />&nbsp
+                            <input type="checkbox" id="tag_Casual" name="games" /> Casual<br />&nbsp
+                            <input type="checkbox" id="tag_None" name="games" /> None &nbsp
+                        </div>
+
+                    </div>
+                    <div id="reporting" style="width: 150px; height: 80px; margin-left: 50px;">
+                        <input style="width: 100px;" type="button" value="Apply" onclick="openSite()">
                     </div>
                 </div>
             </div>

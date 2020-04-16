@@ -46,6 +46,73 @@ function openSite()
         window.location = link3
 }
 
+function openSiteOne()
+{
+    var myrandom = Math.round(Math.random() * 2)
+
+    var link1 = "../Web/filter_interests1.html"
+    var link2 = "../Web/filter_interests2.html"
+    if (myrandom < 1)
+        window.location = link1
+    else if (myrandom >= 1)
+        window.location = link2
+}
+
+function alert()
+{
+    document.getElementById('alert').innerHTML = "<input id='alert'style='width: 100px;' type='button' value='Done'>";
+}
+
+function alertOne() {
+    document.getElementById('alertOne').innerHTML = "<input id='alertOne'style='width: 100px;' type='button' value='Done'>";
+}
+
+function alertTwo() {
+    document.getElementById('alertTwo').innerHTML = "<input id='alertTwo'style='width: 100px;' type='button' value='Done'>";
+}
+
+function remove() {
+    document.getElementById('killme').innerHTML = "<div id='killme'><h2 style='padding: 25px; color: #2b6cd4'>Removed</h2></div>";
+}
+
+function removeOne() {
+    document.getElementById('killmeOne').innerHTML = "<div id='killmeOne'><h2 style='padding: 25px; color: #2b6cd4'>Removed</h2></div>";
+}
+
+function removeTwo() {
+    document.getElementById('killmeTwo').innerHTML = "<div id='killmeTwo'><h2 style='padding: 25px; color: #2b6cd4'>Removed</h2></div>";
+}
+
+function getDates()
+{
+    var myDate = new Date();
+    document.getElementById("someDate").innerHTML = myDate.toDateString();
+}
+
+function getDatesOne() {
+    var myDateOne = new Date(2019, 10, 11);
+    document.getElementById("someDateOne").innerHTML = myDateOne.toDateString();
+}
+
+function getDatesTwo() {
+    var myDateTwo = new Date(2019, 8, 21);
+    document.getElementById("someDateTwo").innerHTML = myDateTwo.toDateString();
+}
+
+function getDatesThree() {
+    var myDateThree = new Date(2020, 2, 30);
+    document.getElementById("someDateThree").innerHTML = myDateThree.toDateString();
+}
+function getDatesFour() {
+    var myDateFour = new Date(2020, 1, 5);
+    document.getElementById("someDateFour").innerHTML = myDateFour.toDateString();
+}
+
+function getDatesFive() {
+    var myDateFive = new Date(2020, 3, 1);
+    document.getElementById("someDateFive").innerHTML = myDateFive.toDateString();
+}
+
 function applied()
 {
     document.getElementById('application').innerHTML = "<input style='width: 100px;'type='button' value='Cancel' onclick='cancel()'>";

@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../Vendor/CSS/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../Vendor/CSS/grid.css">
+    <link rel="stylesheet" type="text/css" href="../Resources/CSS/createpost_style.css">
+    <link rel="stylesheet" type="text/css" href="../Content/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.0.0.slim.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <script src="myScripts/JavaScript.js"></script>
+
+    <title>QueueME/CreatePost</title>
+</head>
+<body onload="get_data();">
+    <div class="nav-background">
+        <nav class="navbar navbar-expand-lg static-top" style="height: 70px;">
+            <div class="nav-bar container">
+                <a class="navbar-brand" href="Homepage.html">
+                    <img class="nav_logo" src="../Resources/CSS/img/logo_name1.png" alt="QueueME" style="width:120px;height: 65px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="input-group md-form form-sm form-1 pl-0">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text cyan lighten-2" id="basic-text1">
+                            <button style="border: none;"><i class="fa fa-search" aria-hidden="true" style="color: #2b6cd4" ;" onclick="window.location.href = '../Web/all_post.html'"></i></button>
+                        </span>
+                    </div>
+                    <form action="all_post.html" style="width: 90%;">
+                        <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
+                    </form>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <div class="nav-link nav_sym" onclick="document.getElementById('notif').style.display='block'">
+                                <button style="background: none; border: none;"><img src="../Resources/CSS/img/notification_sym.png" /></button>
+                                <span class="badge">3</span>
+                            </div>
+                            <div id="notif" class="w3-modal" style="z-index: 999">
+                                <div class="w3-modal-content w3-card-4" style="width: 300px;">
+                                    <header class="container w3-blue notif_head">
+                                        <span onclick="document.getElementById('notif').style.display='none'" class="w3-button w3-display-topright">
+                                            &times;
+                                        </span>
+                                        <h2>Notifications</h2>
+                                    </header>
+                                    <div class="container">
+                                        <div class="container notificates notificates">
+                                            <div class="">New Reply</div><button class="nav-link" onclick="window.location.href='../Web/post.html';">View</button>
+                                        </div>
+                                        <div class="container notificates notificates">
+                                            New Applicant<button class="nav-link" onclick="window.location.href='../Web/post.html';">View</button>
+                                        </div>
+                                        <div class="container notificates notificates">
+                                            New Update to UI<button class="nav-link" onclick="window.location.href='../Web/Homepage.html';">View</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="acc-bt nav-link nav_sym" href="profile_view.html">
+                                <img src="../Resources/CSS/img/account-logo1.png" style="width: 50px; height: 50px;">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav_sym" href="../Default.html">
+                                <h2 style="font-size: 25px; position: absolute; padding-top: 10px;">Sign Out</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container" style="margin-top: 50px;">
+        <div class="center-box row">
+            <div class="scrollbox flex-row-reverse">
+                <div id="killme">
+                    <div class="row no-gutters">
+                        <div class="col-sm m-0 top_leftbox">
+                            <div class="prof_title">
+                                <strong>Game:</strong>
+                            </div>
+                            <p class="prof_text">Game 2</p>
+                        </div>
+                        <div class="col-sm m-0 boxtop" style="width: 50px;">
+                            <div class="prof_title">
+                                <strong>Title:</strong>
+                            </div>
+                            <p class="prof_text">Help with game!?</p>
+                        </div>
+                        <div class="col-sm m-0 boxtop" style="border-left: none; width: 50px;">
+                            <div class="prof_title">
+                                <strong>Description:</strong>
+                            </div>
+                            <p class="prof_text">
+                                I'm stuck in this one part, and am looking for a buddy to help beat it with me. Anybody got ...
+                            </p>
+                        </div>
+                        <div class="col-sm m-0 top_rightbox">
+                            <div class="prof_title">
+                                <strong>User Name:</strong>
+                            </div>
+                            <a class="acc-bt nav-link nav_sym" href="profile_view.html" onload=" getDates();">
+                                <p class="prof_text">JoeShmo</p>
+                                <p id="someDate" style="width: 150px; margin-top: 50px;"></p>
+                                <script>getDates();</script>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div id="application" style="width: 130px; height: 80px;">
+                            <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
+                        </div>
+                        <div id="remove" style="width: 120px; height: 80px;">
+                            <input style='width: 100px;' type='button' value='Not Interested' onclick='remove()'>
+                        </div>
+                    </div>
+                </div>
+                <div id="killmeOne">
+                    <div class="row no-gutters">
+                        <div class="col-sm m-0 top_leftbox">
+                            <div class="prof_title">
+                                <strong>Game:</strong>
+                            </div>
+                            <p class="prof_text">Game 1</p>
+                        </div>
+                        <div class="col-sm m-0 boxtop" style="width: 50px;">
+                            <div class="prof_title">
+                                <strong>Title:</strong>
+                            </div>
+                            <p class="prof_text">Lonely Gamer :(</p>
+                        </div>
+                        <div class="col-sm m-0 boxtop" style="border-left: none; width: 50px;">
+                            <div class="prof_title">
+                                <strong>Description:</strong>
+                            </div>
+                            <p class="prof_text">
+                                Went through a rough week and am looking for new buddies to play with. You can also reach ...
+                            </p>
+                        </div>
+                        <div class="col-sm m-0 top_rightbox">
+                            <div class="prof_title">
+                                <strong>User Name:</strong>
+                            </div>
+                            <a class="acc-bt nav-link nav_sym" href="profile_view.html">
+                                <p class="prof_text">BigBubowski</p>
+                                <p id="someDateTwo" style="width: 150px; margin-top: 50px;"></p>
+                                <script>getDatesTwo();</script>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div id="application" style="width: 130px; height: 80px;">
+                            <input style="width: 100px;" type="button" value="View" onclick="window.location.href = '../Web/post.html'">
+                        </div>
+                        <div id="removeOne" style="width: 120px; height: 80px;">
+                            <input style='width: 100px;' type='button' value='Not Interested' onclick='removeOne()'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxborder_middle" style="width: 200px; height: 724px; border-bottom-right-radius: 10px; border-top-right-radius: 10px; border-left: none;">
+                <div class="prof_title" style="height: 3.8%;">
+                    <strong>Filters:</strong>
+                </div>
+                <div class="prof_text">
+                    <label for="tags" style="margin-bottom: 0px;">Tags:</label>&nbsp
+                    <div>
+                        <input type="checkbox" id="tag_adventure" name="tags" /> Adventure<br />&nbsp
+                        <input type="checkbox" id="tag_action" name="tags" /> Action<br />&nbsp
+                        <input type="checkbox" id="tag_casual" name="tags" /> Casual<br />&nbsp
+                        <input type="checkbox" id="tag_competitive" name="tags" /> Competitive<br />&nbsp
+                        <input type="checkbox" id="tag_cooperative" name="tags" /> Cooperative<br />&nbsp
+                        <input type="checkbox" id="tag_creative" name="tags" /> Creative<br />&nbsp
+                        <input type="checkbox" id="tag_puzzle" name="tags" /> Puzzle<br />&nbsp
+                        <input type="checkbox" id="tag_rpg" name="tags" /> RPG<br />&nbsp
+                        <input type="checkbox" id="tag_racing" name="tags" /> Racing<br />&nbsp
+                        <input type="checkbox" id="tag_shooter" name="tags" /> Shooter &nbsp
+                    </div>
+                    <label for="tags" style="margin-bottom: 0px;">Games:</label>&nbsp
+                    <div>
+                        <input type="checkbox" id="game1" name="games" /> Game 1<br />&nbsp
+                        <input type="checkbox" id="game2" name="games" /> Game 2<br />&nbsp
+                        <input type="checkbox" id="game3" name="games" /> Game 3<br />&nbsp
+                        <input type="checkbox" id="game4" name="games" /> Game 4<br />&nbsp
+                        <input type="checkbox" id="game5" name="games" /> Game 5<br />&nbsp
+                        <input type="checkbox" id="game6" name="games" /> Game 6 &nbsp
+                    </div>
+                    <label for="tags" style="margin-bottom: 0px;">Skill Level:</label>&nbsp
+                    <div>
+                        <input type="checkbox" id="tag_Professional" name="games" /> Professional<br />&nbsp
+                        <input type="checkbox" id="tag_Experienced" name="games" /> Experienced<br />&nbsp
+                        <input type="checkbox" id="tag_Good" name="games" /> Good<br />&nbsp
+                        <input type="checkbox" id="tag_Fair" name="games" /> Fair<br />&nbsp
+                        <input type="checkbox" id="tag_Casual" name="games" /> Casual<br />&nbsp
+                        <input type="checkbox" id="tag_None" name="games" /> None &nbsp
+                    </div>
+
+                </div>
+                <div id="reporting" style="width: 150px; height: 80px; margin-left: 50px;">
+                    <input style="width: 100px;" type="button" value="Apply" onclick="openSiteOne()">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
